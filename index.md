@@ -101,6 +101,7 @@ There’s a positive relationship between risk and return, so the biggest gainer
 - **Tech-led growth:** Technology-oriented sectors dominated year-over-year returns but carried higher volatility.  
 - **Concentrated winners:** Gains were driven by a few strong performers rather than a broad market surge.  
 - **Hidden variation:** Within each sector, performance dispersion is large and averages can be misleading.  
+- **Future investment:** High-growth stocks may offer opportunities but come with elevated risk, requiring careful selection and diversification. We can use these insights to inform portfolio construction and risk management strategies.
 
 
 ## Resources & Links

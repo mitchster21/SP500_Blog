@@ -31,23 +31,41 @@ Total sample: **~500 companies**, with multiple numeric and categorical variable
 
 ## EDA highlights
 - **Top performers:** The top ten performers of the S&P 500 contained names from technology and data-driven firms (example: *Robinhood, Palantir, Western Digital*).  
-![Top 10 Performers](images/top10_performers.csv)
+![Top 10 Performers]
+### Top 10 Performers (1-Year Change %)
+| Ticker | 1Y Change (%) |
+|:-------|---------------:|
+| HOOD | 332.83 |
+| PLTR | 213.26 |
+| WDC | 208.20 |
+| STX | 171.37 |
+| APP | 152.04 |
+| WBD | 139.27 |
+| MU | 111.03 |
+| LRCX | 106.93 |
+| AVGO | 95.35 |
+| TPR | 95.17 |
+
+- **Sector Performance:**
 ![Average 1-Year Return by Sector](images/sector_avg_return.png)
 
-- **Sector averages:** On average, **Information Technology** and **Consumer Discretionary** produced the highest mean 1-year returns; defensive sectors such as **Utilities** lagged.  
+On average, **Information Technology** and **Consumer Discretionary** produced the highest mean 1-year returns; defensive sectors such as **Utilities** lagged.  
 - **Risk vs return:** Many of the largest 1-year winners also show high annualized volatility and large max drawdowns — indicating higher risk profiles.  
-- **Distributions:** The 1-year returns distribution is right-skewed with heavy tails; volatility has a positive lower bound and a long upper tail.
+![Risk vs Return Scatter](images/risk_vs_return.png)
+- **Distributions:** 
+![Distributions of Metrics](images/distribution_metrics.png)
+![Spread of Numeric Metrics](images/spread_of_metrics.png)
+![Correlations of Metrics](images/pairplot_metrics.png)
+We can observe that average annual return % is strongly linearly correlated with 1-year percent change, while volatility and max drawdown are moderately correlated with returns. We can also see that 1 year percent change and average annual return % are fairly normally distributed, while volatility shows a right-skewed distribution.
 
-(Include images: Top performers bar chart; Average 1Y return by sector bar chart; Histogram of metrics; Risk vs Return scatter.)
-
-## Key findings (brief)
+## Key findings
 - Technology-oriented sectors dominated year-over-year returns, but at the cost of higher volatility.  
 - Several mid-cap names produced outsized returns, which suggests concentrated winners rather than broad-based market gains.  
 - Sector-level boxplots show large dispersion within sectors — sector average masks important company-level heterogeneity.
 
 ## Resources & links
-- S&P 500 list (Wikipedia) — *List of S&P 500 companies*  
-- Yahoo Finance docs / `yfinance` — *Python wrapper and documentation*  
+- S&P 500 list (Wikipedia) — https://en.wikipedia.org/wiki/List_of_S%26P_500_companies  
+- Yahoo Finance docs / `yfinance` — https://finance.yahoo.com/quote/ES%3DF/  
 - Code & data: **[Data & scripts repository]**(https://github.com/mitchster21/Data_Acquisition_Blog_SP500)
 
 ---

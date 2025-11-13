@@ -31,7 +31,8 @@ Total sample: **~500 companies**, with multiple numeric and categorical variable
 
 ## EDA highlights
 - **Top performers:** The top ten performers of the S&P 500 contained names from technology and data-driven firms (example: *Robinhood, Palantir, Western Digital*).  
-![Top 10 Performers](images/top_performers.png)
+![Top 10 Performers](images/top10_performers.csv)
+![Average 1-Year Return by Sector](images/sector_avg_return.png)
 
 - **Sector averages:** On average, **Information Technology** and **Consumer Discretionary** produced the highest mean 1-year returns; defensive sectors such as **Utilities** lagged.  
 - **Risk vs return:** Many of the largest 1-year winners also show high annualized volatility and large max drawdowns — indicating higher risk profiles.  

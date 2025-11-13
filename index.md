@@ -1,25 +1,26 @@
 # Data Acquisition: Scraping and Analyzing S&P 500 Stock Performance
 
-**Question:** How have S&P 500 companies performed over the past year, and which sectors led or lagged performance?
+**Question:** How have S&P 500 companies performed over the past year and can it help us make future investment decisions?
 
 ## Why this project
-Stock performance is a compact, real-world example that combines web scraping, API usage, cleaning, and exploratory data analysis. The S&P 500 provides a consistent universe of firms (≈500 companies), which makes it ideal for teaching reproducible data collection and analysis while producing clear, interpretable visualizations.
+Stock performance is a widely followed metric that reflects both company fundamentals and market sentiment. Analyzing recent stock performance can provide insights into sector trends, risk profiles, and potential investment opportunities. By focusing on the S&P 500, we can leverage a well-known index that represents a broad cross-section of the U.S. economy.
 
 ## Data sources and ethics
 I collected a list of S&P 500 constituents from **Wikipedia** (public, table-formatted) and used **Yahoo Finance** (via the `yfinance` Python library) to pull one-year historical price data. Both sources are publicly accessible, and I respected scraping etiquette by supplying a descriptive `User-Agent` header and limiting request frequency in my scripts. No private API keys were used.
+I also checked the robots.txt files of both sites to ensure compliance with their scraping policies. 
 
 ## What I built
 The final dataset links each S&P 500 ticker to:
-- company name and sector (from Wikipedia)
+- company name and sector
 - 1-year percent price change
-- annualized volatility (std of daily returns, annualized)
+- annualized volatility
 - average annualized return (from daily returns)
 - max drawdown over the year
 
 Total sample: **~500 companies**, with multiple numeric and categorical variables suitable for EDA and basic ranking analysis.
 
 ## How others can get started
-1. Use `pandas.read_html()` (with `requests.get()` and a sensible `User-Agent`) to pull the Wikipedia table of S&P 500 companies.  
+1. Use `pandas.read_html()` (with `requests.get()` and a `User-Agent`) to pull the Wikipedia table of S&P 500 companies.  
 2. Convert tickers that use dots (e.g., `BRK.B`) to Yahoo’s format (`BRK-B`).  
 3. Use `yfinance.download()` to pull 1-year daily data for all tickers.  
 4. Flatten the multi-index columns created by `yfinance` (e.g., produce `AAPL_Close`) or iterate per ticker.  
@@ -29,7 +30,9 @@ Total sample: **~500 companies**, with multiple numeric and categorical variable
 (See the linked code repo for runnable Jupyter notebooks and the exact code used.)
 
 ## EDA highlights
-- **Top performers:** The top decile of the S&P 500 contained names from technology and data-driven firms (example: *Robinhood, Palantir, Western Digital*).  
+- **Top performers:** The top ten performers of the S&P 500 contained names from technology and data-driven firms (example: *Robinhood, Palantir, Western Digital*).  
+![Top 10 Performers](images/top_performers.png)
+
 - **Sector averages:** On average, **Information Technology** and **Consumer Discretionary** produced the highest mean 1-year returns; defensive sectors such as **Utilities** lagged.  
 - **Risk vs return:** Many of the largest 1-year winners also show high annualized volatility and large max drawdowns — indicating higher risk profiles.  
 - **Distributions:** The 1-year returns distribution is right-skewed with heavy tails; volatility has a positive lower bound and a long upper tail.
@@ -53,4 +56,4 @@ All code (scraping, cleaning, and EDA) is available in the linked GitHub repo as
 
 ---
 
-**Author:** Mitchell Heaton — contact via GitHub
+**Author:** Mitchell Heaton

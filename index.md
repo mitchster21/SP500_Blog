@@ -56,7 +56,6 @@ Full working code is available here: [**Data & Scripts Repository**](https://git
 
 ### Top Performers
 The top ten performers of the S&P 500 this past year were mostly technology or data-driven firms.  
-![Top 10 Performers](images/top10_performers.csv)
 
 | **Ticker** | **1Y Change (%)** |
 |:------------|------------------:|
@@ -71,13 +70,13 @@ The top ten performers of the S&P 500 this past year were mostly technology or d
 | AVGO | 95.35 |
 | TPR  | 95.17 |
  
-High-performing stocks are concentrated in the tech sector, especially companies benefiting from AI, data infrastructure, and digital platforms. This aligns with broader 2024–2025 market trends emphasizing innovation and software-driven growth.
+High-performing stocks are concentrated in the tech sector, especially companies benefiting from AI and digital platforms. This aligns with broader 2024–2025 market trends emphasizing innovation and software-driven growth.
 
 
 ### Sector Performance
 ![Average 1-Year Return by Sector](images/sector_avg_return.png)
 
-Information Technology and Consumer Discretionary sectors led in average annual returns, while Utilities and Real Estate lagged. This reflects market risk appetite — investors favored growth sectors over defensives.
+The Information Technology sector led in average annual returns, while Materials, Real Estate, and Consumer Staples lagged. This reflects the market’s focus on tech innovation and growth-oriented investments over traditional industries.
 
 ---
 
